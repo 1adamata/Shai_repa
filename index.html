@@ -21,7 +21,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #eef2f5; /* Slightly different background */
+            background-color: var(--periglacial-blue);
         }
         .slide {
             background: white;
@@ -62,7 +62,7 @@
             padding-bottom: 0.5rem;
         }
         .card {
-            background-color: #f8fbf7;
+            background-color: #f7f9f6; /* Lighter version of periglacial-blue */
             border-radius: 0.75rem;
             padding: 1.5rem;
             border: 1px solid var(--de-york);
@@ -92,41 +92,6 @@
         }
         .list-icon {
             color: var(--mountain-meadow);
-        }
-        /* Infographic styles */
-        .bar-chart {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-        .bar-container {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        .bar-label {
-            width: 80px;
-            font-size: 0.875rem;
-            color: var(--evening-sea);
-            text-align: right;
-        }
-        .bar {
-            height: 24px;
-            border-radius: 0.25rem;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 0.5rem;
-            color: white;
-            font-weight: 600;
-            font-size: 0.875rem;
-        }
-        .bar-before {
-            background-color: #fca5a5; /* Red-ish for "before" */
-        }
-        .bar-after {
-            background-color: var(--aqua-forest); /* Green for "after" */
         }
     </style>
 </head>
@@ -207,67 +172,41 @@
             <p class="slide-subtitle">Реальные, измеримые результаты и потенциальная выгода для системы здравоохранения.</p>
 
             <h2 class="section-title">Доказанная эффективность на реальных кейсах:</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
                 <!-- Кейс 1 -->
                 <div class="card">
                     <h3 class="card-title">АО «Самрук-Қазына» (Обработка жалоб)</h3>
-                    <p class="card-text mb-4"><strong>Результат:</strong> Сокращение срока обработки в 24 раза.</p>
-                    <div class="bar-chart">
-                        <div class="bar-container">
-                            <div class="bar-label">До SHAI</div>
-                            <div class="bar bar-before" style="width: 100%;">8 дней</div>
-                        </div>
-                        <div class="bar-container">
-                            <div class="bar-label">После</div>
-                            <div class="bar bar-after" style="width: 4.1%;">8 ч</div>
-                        </div>
-                    </div>
+                    <p class="card-text"><strong>Проблема:</strong> Ручной разбор жалоб поставщиков.</p>
+                    <p class="card-text"><strong>Результат с SHAI:</strong> Срок обработки <span class="highlight">сократился с 8 дней до 8 часов</span>. Количество ошибок <span class="highlight">снизилось на 90%</span>.</p>
                 </div>
                 <!-- Кейс 2 -->
                 <div class="card">
-                     <h3 class="card-title">Galvani Bioelectronics, США (Аудит)</h3>
-                    <p class="card-text mb-4"><strong>Результат:</strong> Сокращение срока проверки в ~2160 раз.</p>
-                    <div class="bar-chart">
-                        <div class="bar-container">
-                            <div class="bar-label">До SHAI</div>
-                            <div class="bar bar-before" style="width: 100%;">3 месяца</div>
-                        </div>
-                        <div class="bar-container">
-                            <div class="bar-label">После</div>
-                            <div class="bar bar-after" style="width: 0.1%;">1 час</div>
-                        </div>
-                    </div>
+                    <h3 class="card-title">Galvani Bioelectronics, США (Аудит)</h3>
+                    <p class="card-text"><strong>Проблема:</strong> Проверка 200 регламентов на соответствие стандартам FDA и ISO.</p>
+                    <p class="card-text"><strong>Результат с SHAI:</strong> Срок проверки <span class="highlight">сократился с 3 месяцев до 1 часа</span>.</p>
                 </div>
             </div>
 
             <div>
                 <h2 class="section-title">Ожидаемый эффект для системы здравоохранения РК:</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-                    <div class="flex flex-col items-center">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-3">
-                            <svg class="h-8 w-8 list-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        </div>
-                        <p class="font-semibold text-gray-700">Снижение административной нагрузки</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-3">
-                            <svg class="h-8 w-8 list-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                        </div>
-                        <p class="font-semibold text-gray-700">Повышение точности данных</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-3">
-                            <svg class="h-8 w-8 list-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                        </div>
-                        <p class="font-semibold text-gray-700">Ускорение принятия решений</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-3">
-                            <svg class="h-8 w-8 list-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                        </div>
-                        <p class="font-semibold text-gray-700">Соблюдение стандартов и комплаенса</p>
-                    </div>
-                </div>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <svg class="flex-shrink-0 h-6 w-6 list-icon mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                        <span><strong>Снижение административной нагрузки</strong> на медицинский и административный персонал.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="flex-shrink-0 h-6 w-6 list-icon mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                        <span><strong>Повышение точности данных</strong> и качества управленческих решений.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="flex-shrink-0 h-6 w-6 list-icon mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                        <span><strong>Ускорение принятия решений</strong> руководством благодаря аналитике в реальном времени.</span>
+                    </li>
+                    <li class="flex items-start">
+                         <svg class="flex-shrink-0 h-6 w-6 list-icon mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                        <span><strong>Гарантированное соблюдение стандартов</strong> и комплаенса по всей вертикали ведомства.</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
