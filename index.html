@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Презентация AI-платформы SHAI для Минздрава</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --genoa: #148364;
+            --periglacial-blue: #d5e0cd;
+            --evening-sea: #044c4c;
+            --cod-gray: #110d0f;
+            --aqua-forest: #6ea570;
+            --shakespeare: #57b5cf;
+            --jelly-bean: #26919b;
+            --mountain-meadow: #1eac5e;
+            --de-york: #76c78d;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #eef2f5; /* Slightly different background */
+        }
+        .slide {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease-in-out;
+        }
+        .slide-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+        }
+        .slide-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--evening-sea);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        .slide-subtitle {
+            font-size: 1.125rem;
+            color: var(--evening-sea);
+            opacity: 0.9;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--genoa);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--de-york);
+            padding-bottom: 0.5rem;
+        }
+        .card {
+            background-color: #f8fbf7;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            border: 1px solid var(--de-york);
+            height: 100%;
+        }
+        .card-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--evening-sea);
+            display: flex;
+            align-items: center;
+        }
+        .card-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 0.75rem;
+            color: var(--mountain-meadow);
+        }
+        .card-text {
+            color: var(--evening-sea);
+            margin-top: 0.75rem;
+            opacity: 0.9;
+        }
+        .highlight {
+            color: var(--mountain-meadow);
+            font-weight: 700;
+        }
+        .list-icon {
+            color: var(--mountain-meadow);
+        }
+        /* Infographic styles */
+        .bar-chart {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .bar-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .bar-label {
+            width: 80px;
+            font-size: 0.875rem;
+            color: var(--evening-sea);
+            text-align: right;
+        }
+        .bar {
+            height: 24px;
+            border-radius: 0.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 0.5rem;
+            color: white;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+        .bar-before {
+            background-color: #fca5a5; /* Red-ish for "before" */
+        }
+        .bar-after {
+            background-color: var(--aqua-forest); /* Green for "after" */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide-container">
+        <!-- Слайд 1 -->
+        <div class="slide" id="slide1">
+            <h1 class="slide-title">AI-платформа SHAI: Трансформация ключевых процессов в здравоохранении</h1>
+            <p class="slide-subtitle">No-code платформа для создания защищенных виртуальных AI-ассистентов, обученных на внутренних данных Министерства для обеспечения релевантности и безопасности.</p>
+
+            <h2 class="section-title">Ключевые задачи, решаемые SHAI для Минздрава:</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                <!-- Задача 1 -->
+                <div class="card">
+                    <h3 class="card-title">
+                        <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        Автоматизация и комплаенс
+                    </h3>
+                    <p class="card-text"><strong>Пример:</strong> AI-ассистент за секунды проверяет проекты договоров или приказов на соответствие действующим НПА и внутренним регламентам.</p>
+                </div>
+                <!-- Задача 2 -->
+                <div class="card">
+                    <h3 class="card-title">
+                        <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V7a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                        Отчеты и аналитика
+                    </h3>
+                    <p class="card-text"><strong>Пример:</strong> Автоматический сбор данных из разных департаментов для формирования сводного отчета и выявления бюджетных аномалий.</p>
+                </div>
+                <!-- Задача 3 -->
+                <div class="card">
+                    <h3 class="card-title">
+                        <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                        Обработка обращений
+                    </h3>
+                    <p class="card-text"><strong>Пример:</strong> Первичный анализ жалоб, классификация проблемы и генерация проекта ответа на основе утвержденных инструкций.</p>
+                </div>
+                <!-- Задача 4 -->
+                <div class="card">
+                    <h3 class="card-title">
+                        <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+                        Единый центр знаний
+                    </h3>
+                    <p class="card-text"><strong>Пример:</strong> Любой сотрудник через чат получает мгновенный доступ к актуальным протоколам, приказам и стандартам, что исключает ошибки.</p>
+                </div>
+            </div>
+
+            <h2 class="section-title">Варианты внедрения:</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="card-title">
+                        <svg class="card-icon" style="color: var(--shakespeare);" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>
+                        SaaS (Облачное решение)
+                    </h3>
+                    <ul class="card-text list-disc list-inside space-y-2">
+                        <li>Быстрый запуск без капитальных затрат.</li>
+                        <li>Данные хранятся в сертифицированном дата-центре на территории РК.</li>
+                        <li>Идеально для быстрого пилотирования.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">
+                        <svg class="card-icon" style="color: var(--jelly-bean);" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg>
+                        On-Premise (Локальная установка)
+                    </h3>
+                    <ul class="card-text list-disc list-inside space-y-2">
+                        <li>Максимальный контроль и безопасность.</li>
+                        <li>Платформа разворачивается на серверах Министерства.</li>
+                        <li>Полная интеграция с закрытыми информационными системами.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Слайд 2 -->
+        <div class="slide" id="slide2">
+            <h1 class="slide-title">Кейсы и ожидаемый эффект</h1>
+            <p class="slide-subtitle">Реальные, измеримые результаты и потенциальная выгода для системы здравоохранения.</p>
+
+            <h2 class="section-title">Доказанная эффективность на реальных кейсах:</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <!-- Кейс 1 -->
+                <div class="card">
+                    <h3 class="card-title">АО «Самрук-Қазына» (Обработка жалоб)</h3>
+                    <p class="card-text mb-4"><strong>Результат:</strong> Сокращение срока обработки в 24 раза.</p>
+                    <div class="bar-chart">
+                        <div class="bar-container">
+                            <div class="bar-label">До SHAI</div>
+                            <div class="bar bar-before" style="width: 100%;">8 дней</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-label">После</div>
+                            <div class="bar bar-after" style="width: 4.1%;">8 ч</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Кейс 2 -->
+                <div class="card">
+                     <h3 class="card-title">Galvani Bioelectronics, США (Аудит)</h3>
+                    <p class="card-text mb-4"><strong>Результат:</strong> Сокращение срока проверки в ~2160 раз.</p>
+                    <div class="bar-chart">
+                        <div class="bar-container">
+                            <div class="bar-label">До SHAI</div>
+                            <div class="bar bar-before" style="width: 100%;">3 месяца</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-label">После</div>
+                            <div class="bar bar-after" style="width: 0.1%;">1 час</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="section-title">Ожидаемый эффект для системы здравоохранения РК:</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-3">
+                            <svg class="h-8 w-8 list-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <p class="font-semibold text-gray-700">Снижение административной нагрузки</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-3">
+                            <svg class="h-8 w-8 list-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                        </div>
+                        <p class="font-semibold text-gray-700">Повышение точности данных</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-3">
+                            <svg class="h-8 w-8 list-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </div>
+                        <p class="font-semibold text-gray-700">Ускорение принятия решений</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-3">
+                            <svg class="h-8 w-8 list-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        </div>
+                        <p class="font-semibold text-gray-700">Соблюдение стандартов и комплаенса</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
